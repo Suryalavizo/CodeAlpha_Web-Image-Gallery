@@ -1,0 +1,64 @@
+h1{
+	padding-left: 600px;
+}
+
+.gallery {
+	width: 800px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+}
+
+.gallery-thumbnails {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.thumbnail {
+	width: 30%;
+	margin: 10px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.thumbnail:hover {
+	transform: scale(0.8) rotate(-15deg);
+	border-radius: 20px;
+	opacity: 0.8;
+}
+
+.gallery-fullscreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.gallery-fullscreen img {
+	width: 105%;
+	height: 100%;
+	object-fit: contain;
+}
+
+#prev-button, #next-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+#prev-button {
+	left: 10px;
+}
+
+#next-button {
+	right: 10px;
+}
